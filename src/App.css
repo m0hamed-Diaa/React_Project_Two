@@ -1,3 +1,6 @@
 @import "tailwindcss";
 
+.Logo {
+  font-style: italic;
+}
 

@@ -1,14 +1,14 @@
 import { v4 as uuid} from "uuid"
-import type { IProduct } from "../interfaces/index"
+import type { IFormInput, IProduct } from "../interfaces/index"
 
 export const ProductList: IProduct[] = [
     {
         id: uuid(),
-        title: "2022 Genesis GV70: Nomine....",
+        title: "2022 Genesis GV70: Nomine",
         describtion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, doloribus. A sleek black porsche parked on the street. A sleek black porsche parked on the street.",
         imageUrl: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         price: "$210,000,0",
-        colors: ["#FF0032", "#2563eb", "#FF6E31"],
+        colors: ["#FF7289", "#FE67f3", "#FF6E31", "#BEb703"],
         catogrey: {
             name: "Cars",
             imageUrl: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -16,7 +16,7 @@ export const ProductList: IProduct[] = [
     },
     {
         id: uuid(),
-        title: "Chevrolet Spark. 995cc Pertrol",
+        title: "Chevrolet Spark. 995cc Petrol",
         describtion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, doloribus. A sleek black porsche parked on the street.",
         imageUrl: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         price: "$170,000,0",
@@ -76,3 +76,29 @@ export const ProductList: IProduct[] = [
     },
 ]
 
+export const formInputList: IFormInput[] = [
+    {
+        id: "title",
+        name: "title",
+        label: "Product Title",
+        type: "text"
+    },
+    {
+        id: "description",
+        name: "description",
+        label: "Product Description",
+        type: "text"
+    },
+    {
+        id: "image",
+        name: "iamgeUel",
+        label: "Product ImageUrl",
+        type: "text"
+    },
+    {
+        id: "price",
+        name: "price",
+        label: "Product Price",
+        type: "text"
+    },
+]
