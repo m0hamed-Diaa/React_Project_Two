@@ -1,23 +1,16 @@
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import type { ReactNode } from "react";
-// import { useState } from "react";
+
 interface IProps {
   isOpen: boolean;
   close: () => void;
   title?: string;
   children: ReactNode;
+  description?: string;
 }
-const Model = ({ isOpen, close, title, children }: IProps) => {
+const Model = ({ isOpen, close, title, children, description  }: IProps) => {
   return (
     <>
-      {/* <div className="fixed inset-0 flex items-center justify-center">
-        <Button
-          onClick={open}
-          className="rounded-xl bg-indigo-500 px-4 py-2 text-sm font-medium text-white data-hover:bg-indigo-400 duration-500 cursor-pointer"
-        >
-          Open dialog
-        </Button>
-      </div> */}
 
       <Dialog
         open={isOpen}
@@ -25,7 +18,7 @@ const Model = ({ isOpen, close, title, children }: IProps) => {
         className="relative z-10 focus:outline-none"
         onClose={close}
       >
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto backdrop-blur-md">
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel
               transition
@@ -37,6 +30,14 @@ const Model = ({ isOpen, close, title, children }: IProps) => {
                   className="text-base/7 font-medium text-black"
                 >
                   {title}
+                </DialogTitle>
+              )}
+              {description && (
+                <DialogTitle
+                  as="p"
+                  className="text-base/7 font-medium text-gray-500"
+                >
+                  {description}
                 </DialogTitle>
               )}
               {children}

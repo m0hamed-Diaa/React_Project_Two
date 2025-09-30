@@ -1,8 +1,8 @@
 import type { InputHTMLAttributes } from "react";
 
-type IProps = InputHTMLAttributes<HTMLInputElement>
+type IProps = InputHTMLAttributes<HTMLInputElement>;
 
-const CustomInput = ({ ...rest}: IProps) => {
+const CustomInput = ({ ...rest }: IProps) => {
   return (
     <input
       {...rest}

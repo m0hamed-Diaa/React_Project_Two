@@ -20,3 +20,7 @@ export function textSlice(txt: string, max: number = 50) {
     }
     return txt;
 }
+
+export function formatNumberStr(number: string) {
+    return (Number(number).toLocaleString("en-US"));
+}
