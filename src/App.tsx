@@ -114,6 +114,14 @@ const App = () => {
     setProduct(defaultProductObj);
     setTempColor([]);
     close();
+    toast("Product has been Added", {
+      duration: 3000,
+      icon: "✅",
+      style: {
+        backgroundColor: "black",
+        color: "white",
+      }
+    });
   };
   const submitEditHandler = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -138,6 +146,14 @@ const App = () => {
     setProductToEdit(defaultProductObj);
     setTempColor([]);
     closeEdit();
+    toast("Product has been Edited", {
+      duration: 3000,
+      icon: "✅",
+      style: {
+        backgroundColor: "black",
+        color: "white",
+      }
+    });
   };
 
   const removeProductHandler = () => {
